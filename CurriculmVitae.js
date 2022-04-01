@@ -38,9 +38,8 @@ class Extra extends Experience{
 }
 
 
-const uploadconfirm= document.getElementById('uploadconfirm').
-			addEventListener('click', ()=> {
-				Papa.parse(document.getElementById('uploadfile').files[0],
+
+				Papa.parse('cs.csv',
 				{
 					download: true,
 					header: true,
@@ -50,4 +49,3 @@ const uploadconfirm= document.getElementById('uploadconfirm').
 						
 					}
 				});
-			});
