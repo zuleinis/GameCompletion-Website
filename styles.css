@@ -19,9 +19,9 @@ header::after{
     clear: both;
 }
 .logo {
-    width: 9%;
+    width: 20%;
     float: left;
-    shape-image-threshold: inherit;
+   
 }
 nav {
     float: right;
@@ -35,7 +35,7 @@ nav li{
     display: inline-block;
     margin-left: 75px;
     padding-top: 45px;
-
+    
     position: relative;
 
 }
