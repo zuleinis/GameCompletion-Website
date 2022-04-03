@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    background: #222;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+header{
+    background: #23416cec
+}
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.logo {
+    width: 10%;
+    float: left;
+   
+}
+.Intro {
+    height: 100px;
+    color: white;
+    text-align: left;
+    position: relative;
+    top: 20%;
+    font-size: 60px;
+   
+}
+.Image {
+    background-image: url(Images/Lostressabios.png);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 600px;
+}
+
+nav {
+    float: right;
+}
+nav ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+nav li{
+    display: inline-block;
+    margin-left: 75px;
+    padding-top: 45px;
+    
+    position: relative;
+
+}
+nav a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+
+}
+nav a:hover{
+    color:rgb(255, 255, 255);
+}
+nav a::before{
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: #ffffffec;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 200ms;
+}
+nav a:hover::before{
+    width:100%;
+}
