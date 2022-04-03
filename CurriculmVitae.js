@@ -5,8 +5,13 @@ class ContactInfo {
 		this.Phone = Phone;
 		this.Email = Email;
 	}
-	present(){
-		return ' '
+	present(data){
+	}
+	set(name,address,phone,email){
+		this.Fullname= name;
+		this.Address = address;
+		this.Phone = phone;
+		this.Email = email;
 	}
 }
 class Education {
@@ -39,13 +44,15 @@ class Extra extends Experience{
 
 
 
-				Papa.parse('cs.csv',
-				{
-					download: true,
-					header: true,
-					skipEmptyLines: true,
-					complete: function(results){
-						console.log(results);
+Papa.parse('cs.csv',
+	{
+	download: true,
+	header: true,
+	skipEmptyLines: true,
+	complete: function(results){
+		var Norbert = new ContactInfo(results.data[0].Name,results.data[0].Address,results.data[0].Number,results.data[0].Email);
 						
-					}
-				});
+	}
+});
+document.getElementById("demo").innerHTML =
+Norbert.Fullname + " " + Norbert.Phone+ " " + Norbert.Address+ " " + Norbert.Email;
