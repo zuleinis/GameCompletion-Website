@@ -40,12 +40,9 @@ class Extra{
 	}
 	
 }
-
-fetch('./cs.json')
-.then(function (response) {
-	return response.json();
-})
-.then(function (data){
+async function loadConfigData(){
+	const response=await fetch('./cs.json');
+	const data=await response.json();
 	var CV1 = new ContactInfo(data[0].Name,data[0].Number,
 		data[0].Email);
 	
@@ -78,7 +75,5 @@ fetch('./cs.json')
 		data[0].Lang);
 		document.getElementById("Skills").innerHTML =
 		CV5.Skill+" <br><br>"+CV5.Prog+" <br><br> Languages: "+CV5.Lang+" <br><br><br>";
-})
-.catch(function (err){
-	console.log(err);
-});
+}
+loadConfigData();
