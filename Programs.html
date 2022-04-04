@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-	<head> 
-		<link href="StyleCV.css" rel="stylesheet" type="text/css">
+	<head>
+		<script type="text/javascript", src='Programs.js'>/**/</script> 
+		<link href="StyleProg.css" rel="stylesheet" type="text/css">
 		<meta charset="UTF-8">
 		<title>Norberto's Website</title>
 	</head>
@@ -17,16 +18,51 @@
 						<li><a href="index.html">Home</a></li>
 						<li><a href="CV.html">Curriculm Vitae</a></li>
 						<li><a href="Programs.html">Programs</a></li>
-						<li><a href="Programs.php">Programs</a></li>
+						<li><a href="Programs.php">ProgramsPHP</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
 		<h1 id="java1" class="sum"></h1>
-		<script>
-			document.getElementById("java1").innerHTML = Math.sqrt(64);
-		</script>
-		<script type="text/php" src="Programs.php"></script>>
+		
+		
+		<div class="fancy">
+			<p class="text_prog">Multiplication:</p>
+		</div>
+			<div class="fancy2">
+			<input id="input">
+			<input id="input2">
+			<button class="Submit" onclick="Multi()">Submit</button>
+		</div>
+		<div class="Result">
+			<p class="result" id="Multi"></p>
+		</div>
+		<div class="fancy">
+			<p class="text_prog">Returning the Absolute (positive) value:</p>
+		</div>
+			<div class="fancy2">
+			<input id="inputabs">
+			<button class="Submit" onclick="abs()">Submit</button>
+		</div>
+		<div class="Result">
+			<p class="result" id="Abs"></p>
+		</div>
+
+		<div class="fancy">
+			<p class="text_prog">Which is the higher number?:</p>
+		</div>
+			<div class="fancy2">
+			<input id="inputmax">
+			<input id="inputmax2">
+			<button class="Submit" onclick="Max()">Submit</button>
+		</div>
+		<div class="Result">
+			<p class="result" id="Max"></p>
+		</div>
+		
+		
+		
+		
 		
     </body>
     </html>	
