@@ -41,8 +41,11 @@ class Extra{
 	
 }
 async function loadConfigData(){
-	const response=await fetch('./cs.json');
-	const data=await response.json();
+	const {default:data}=await import('./cs.json',{
+		assert:{
+			type:"json"
+		}
+	});
 	var CV1 = new ContactInfo(data[0].Name,data[0].Number,
 		data[0].Email);
 	
