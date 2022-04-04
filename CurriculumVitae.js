@@ -82,7 +82,3 @@ fetch('./cs.json')
 .catch(function (err){
 	console.log(err);
 });
-function generatePDF() {
-    var element = document.getElementById('CV');
-    html2pdf(element);
-}
