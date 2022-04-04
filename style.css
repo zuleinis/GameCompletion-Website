@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    background: #222;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+header{
+    background: #23416cec
+}
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.logo {
+    width: 5%;
+    float: left;
+   
+}
+nav {
+    float: right;
+}
+nav ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+nav li{
+    display: inline-block;
+    margin-left: 75px;
+    padding-top: 35px;
+    
+    position: relative;
+
+}
+.h1, h1 {
+    color: white;
+    font-size:xx-large; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+.chbxinput{
+    display: none;
+
+}
+
+.chbxbox::after{
+    content: '\2714';
+    color:#ffffff;
+}
+.chbxinput:checked + .chbxbox {
+    background: #2266dc;
+    border-color: #2266dc;
+}
+.chbxbox{
+    width:1.25em;
+    height: 1.25em;
+    border: 2px solid #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+    transition: background 0.15s, border-color 0.15s;
+}
+.side {
+    color: white;
+    font-size:x-large; 
+    display: flex;
+    margin-left: 570px;
+    align-items:baseline;
+}
+.line{
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sum {
+    color: white;
+    margin-left: 580px;
+    margin-right: 550px;
+    display: flex;
+    align-items: center;
+}
+.contact  {
+    color: white;
+    font-size:large; 
+    line-height: 1.1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+
+}
+nav a:hover{
+    color:rgb(255, 255, 255);
+}
+nav a::before{
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: #ffffffec;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 200ms;
+}
+nav a:hover::before{
+    width:100%;
+}
