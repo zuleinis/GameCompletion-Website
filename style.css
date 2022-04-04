@@ -46,34 +46,24 @@ nav li{
     justify-content: center;
     align-items: center;
 }
-.checkbox {
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-}
-.chbxinput{
-    display: none;
-
-}
-
-.chbxbox::after{
-    content: '\2714';
-    color:#ffffff;
-}
-.chbxinput:checked + .chbxbox {
-    background: #2266dc;
-    border-color: #2266dc;
-}
-.chbxbox{
-    width:1.25em;
-    height: 1.25em;
-    border: 2px solid #cccccc;
+.buttondiv {
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-right: 10px;
-    flex-shrink: 0;
-    transition: background 0.15s, border-color 0.15s;
+    align-items: center;
+}
+.button {
+    text-decoration: none;
+    color: rgb(5, 5, 5);
+    width:4.5em;
+    height: 1.5em;
+    border: 5px solid #808080;
+    background-color: #cccccc;
+    display: flex;
+    border-radius: 15px;
+    font-size: 20px;
+    position: center;
+    bottom: 30px;
+
 }
 .side {
     color: white;
