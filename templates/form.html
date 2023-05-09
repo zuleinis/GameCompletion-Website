@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Input Form</title>
+</head>
+<body>
+	<h1>User Input Form</h1>
+	<form action="{{ url_for('view_all_games') }}" method="POST">
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username"><br><br>
+		<!-- <label for="videogame">Videogame:</label>
+		<input type="text" id="videogame" name="videogame"><br><br> -->
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
