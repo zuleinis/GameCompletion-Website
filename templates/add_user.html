@@ -1,15 +1,28 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Add User</title>
-  </head>
-  <body>
-    <h1>Add User</h1>
-    <form method="post">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" /><br /><br />
-      <input type="submit" value="Submit" />
-    </form>
-  </body>
-</html>
+{% extends 'nav_bar.html' %} {% block title %}Add User{% endblock %} {% block
+content %}
+<style>
+  /* Custom CSS to center the form */
+  html,
+  body {
+    height: 100%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    color: white;
+  }
+</style>
+
+<h1>Add User</h1>
+<form method="post">
+  <div class="form-group">
+    <label for="username">Username:</label>
+    <input type="text" class="form-control" id="username" name="username" />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %} {% block footer %} {% include 'footer.html' %} {% endblock %}

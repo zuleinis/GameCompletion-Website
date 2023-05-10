@@ -1,16 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>User Input Form</title>
-</head>
-<body>
-	<h1>User Input Form</h1>
-	<form action="{{ url_for('view_all_games') }}" method="POST">
-		<label for="username">Username:</label>
-		<input type="text" id="username" name="username"><br><br>
-		<!-- <label for="videogame">Videogame:</label>
-		<input type="text" id="videogame" name="videogame"><br><br> -->
-		<input type="submit" value="Submit">
-	</form>
-</body>
-</html>
+{% extends 'nav_bar.html' %} {% block title %}User Input Form{% endblock %} {%
+block content %}
+<style>
+  /* Custom CSS to center the form */
+  html,
+  body {
+    height: 100%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    color: white;
+  }
+</style>
+<div class="container">
+  <h1>My Games</h1>
+  <form action="{{ url_for('view_all_games') }}" method="POST">
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" class="form-control" id="username" name="username" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %} {% block footer %} {% include 'footer.html' %} {% endblock %}

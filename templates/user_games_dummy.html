@@ -1,0 +1,69 @@
+{% extends 'nav_bar.html' %}
+
+{% block title %}View All Games{% endblock %}
+
+{% block content %}
+    <style>
+      /* Center the content vertically and horizontally */
+      html,
+      body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+      /* Adjust the width and margin of the table */
+      table {
+        width: 80%;
+        max-width: 800px;
+        background-color: white;
+      }
+
+      /* Style the table header */
+      th {
+        width: 80%;
+        max-width: 800px;
+        font-weight: bold;
+        text-align: left;
+      }
+
+      /* Style the table cells */
+      td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>{{ username }}'s game completion</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Video Game</th>
+          <th>Progress</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Super Mario Bros</td>
+          <td>50%</td>
+        </tr>
+        <tr>
+          <td>The Legend of Zelda</td>
+          <td>80%</td>
+        </tr>
+        <tr>
+          <td>Minecraft</td>
+          <td>100%</td>
+        </tr>
+        <tr>
+          <td>Fortnite</td>
+          <td>65%</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+{%endblock%}
+{% block footer %} {% include 'footer.html' %} {% endblock %}
