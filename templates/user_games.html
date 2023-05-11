@@ -1,0 +1,58 @@
+{% extends 'nav_bar.html' %}
+
+{% block title %}View All Games{% endblock %}
+
+{% block content %}
+    <style>
+      /* Center the content vertically and horizontally */
+      html,
+      body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Adjust the width and margin of the table */
+      table {
+        width: 80%;
+        max-width: 800px;
+        margin: 20px;
+      }
+
+      /* Style the table header */
+      th {
+        font-weight: bold;
+        text-align: left;
+      }
+
+      /* Style the table cells */
+      td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>{{ username }}'s game completion</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Video Game</th>
+          <th>Progress</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+        <tr>
+          <td>{{ row[0] }}</td>
+          <td>{{ row[1] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
+{%endblock%}
+{% endblock %} {% block footer %} {% include 'footer.html' %} {% endblock %}
