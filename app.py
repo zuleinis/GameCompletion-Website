@@ -10,7 +10,7 @@ app = Flask(__name__)
 # db_name = 'your_database_name'
 # conn = pymysql.connect(host=db_host, user=db_user, password=db_pass, database=db_name)
 
-@app.route('/home')
+@app.route('/')
 def home():
     return render_template('home.html')
 
