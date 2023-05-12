@@ -1,0 +1,33 @@
+{% extends 'nav_bar.html' %} {% block content %}
+<style>
+  /* Custom CSS to center the form */
+  html,
+  body {
+    height: 100%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+</style>
+<div class="container">
+  <div class="card">
+    <div class="card-header">Welcome to My Games</div>
+    <div class="card-body">
+      <h5 class="card-title">What can you do here?</h5>
+      <p class="card-text">
+        This website allows you to see your progress in the games you've played.
+        You can also add a user to our database or edit your username for this
+        app!
+      </p>
+      <a href="{{ url_for('view_all_games_form') }}" class="btn btn-primary"
+        >See my progress</a
+      >
+    </div>
+  </div>
+</div>
+{% endblock %} {% block footer %} {% include 'footer.html' %} {% endblock %}

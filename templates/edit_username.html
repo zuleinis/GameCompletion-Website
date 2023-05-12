@@ -1,0 +1,47 @@
+{% extends 'nav_bar.html' %} {% block title %}Edit Username{% endblock %} {%
+block content %}
+<style>
+  /* Custom CSS to center the form */
+  body,
+  html {
+    height: 100%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    color: white;
+  }
+</style>
+<body>
+  <div class="container">
+    <h1>Edit Username</h1>
+    <form method="POST" action="/edit_username">
+      <div class="form-group">
+        <label for="current_username">Current Username:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="current_username"
+          name="current_username"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="new_username">New Username:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="new_username"
+          name="new_username"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+  </div>
+</body>
+{% endblock %}{% block footer %} {% include 'footer.html' %} {% endblock %}
