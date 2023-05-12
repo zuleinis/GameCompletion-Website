@@ -10,9 +10,9 @@ app = Flask(__name__)
 # db_name = 'your_database_name'
 # conn = pymysql.connect(host=db_host, user=db_user, password=db_pass, database=db_name)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+@app.route('/home')
+def home():
+    return render_template('home.html')
 
 @app.route('/view_all_games_form')
 def view_all_games_form():
